@@ -5,5 +5,4 @@ if defined?(::Rails) && ::Rails.version >= "3.1"
 end
 
 module SassyTwitterBootstrap
-  STYLESHEETS = File.expand_path("../vendor/assets/stylesheets/bootstrap", __FILE__)
 end

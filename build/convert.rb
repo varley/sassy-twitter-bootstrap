@@ -31,7 +31,8 @@ class Convert
 
     # Components: Popovers
     'modals',
-    #'twipsy',
+    #'twipsy', # Has been replaced by tooltip in 2.0
+    #'tooltip',
     #'popovers',
 
     # Components: Buttons & Alerts
