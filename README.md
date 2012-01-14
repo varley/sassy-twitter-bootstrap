@@ -42,7 +42,7 @@ Sassy Twitter Bootstrap is Twitter's toolkit converted to SCSS (and SASS) for Ra
 
 ## CREDITS
 
-This gem was original modeled after the work done by Vincent Waller and others on the compass-twitter-bootstrap project
+This gem was originally modeled after the work done by Vincent Waller and others on the compass-twitter-bootstrap project
 
 + http://github.com/vwall/compass-twitter-bootstrap
 
