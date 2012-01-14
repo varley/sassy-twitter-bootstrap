@@ -18,7 +18,7 @@ Sassy Twitter Bootstrap is Twitter's toolkit converted to SCSS (and SASS) for Ra
 
 **Import it into your SCSS file**
 
-    @import "sassy_twitter_bootstrap";
+    @import "sassy-twitter-bootstrap";
 
 ## Usage with asset pipeline (Rails 3.1)
 
@@ -37,7 +37,7 @@ Sassy Twitter Bootstrap is Twitter's toolkit converted to SCSS (and SASS) for Ra
 
 **Import it into your SCSS file**
 
-    @import "sassy_twitter_bootstrap"
+    @import "sassy-twitter-bootstrap"
 
 
 ## CREDITS
