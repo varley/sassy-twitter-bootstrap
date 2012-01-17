@@ -69,8 +69,8 @@ h6 {
 }
 
 
-// COLORS
-// ------
+// LISTS
+// -----
 
 // Unordered and Ordered lists
 ul, ol {
@@ -90,7 +90,6 @@ ol {
 }
 li {
   line-height: @baseLineHeight;
-  color: @gray;
 }
 ul.unstyled {
   margin-left: 0;
@@ -100,15 +99,16 @@ ul.unstyled {
 // Description Lists
 dl {
   margin-bottom: @baseLineHeight;
-  dt, dd {
-    line-height: @baseLineHeight;
-  }
-  dt {
-    font-weight: bold;
-  }
-  dd {
-    margin-left: @baseLineHeight / 2;
-  }
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @baseLineHeight / 2;
 }
 
 // MISC
@@ -151,7 +151,7 @@ blockquote {
   border-left: 5px solid #eee;
   p {
     margin-bottom: 0;
-    #font > .shorthand(300,16px,@baseLineHeight * 1.25);
+    #font > .shorthand(16px,300,@baseLineHeight * 1.25);
   }
   small {
     display: block;

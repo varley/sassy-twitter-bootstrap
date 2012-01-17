@@ -42,7 +42,7 @@ tbody + tbody {
 // CONDENSED TABLE W/ HALF PADDING
 // -------------------------------
 
-.condensed-table {
+.table-condensed {
   th,
   td {
     padding: 4px 5px;
@@ -53,7 +53,7 @@ tbody + tbody {
 // BORDERED VERSION
 // ----------------
 
-.bordered-table {
+.table-bordered {
   border: 1px solid #ddd;
   border-collapse: separate; // Done so we can round those corners!
   @include border-radius(4px);
@@ -65,6 +65,7 @@ tbody + tbody {
   }
   // Prevent a double border
   thead:first-child tr:first-child th,
+  tbody:first-child tr:first-child th,
   tbody:first-child tr:first-child td {
     border-top: 0;
   }
@@ -93,7 +94,7 @@ tbody + tbody {
 // --------------
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
-.striped-table {
+.table-striped {
   tbody {
     tr:nth-child(odd) td,
     tr:nth-child(odd) th {
@@ -151,7 +152,7 @@ table {
   // Style the sorted column headers (THs)
   .headerSortUp,
   .headerSortDown {
-    background-color: rgba(141,192,219,.25);
+    background-color: #f7f7f9;
     text-shadow: 0 1px 1px rgba(255,255,255,.75);
   }
   // Style the ascending (reverse alphabetical) column header

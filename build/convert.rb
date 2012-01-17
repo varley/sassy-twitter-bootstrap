@@ -44,6 +44,8 @@ class Convert
     'thumbnails',
     'labels',
     #'progress-bars',
+    'accordion',
+    'carousel',
 
     # Utility classes
     'utilities',

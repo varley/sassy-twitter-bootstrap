@@ -21,6 +21,7 @@
 .dropdown .caret {
   margin-top: 8px;
   margin-left: 2px;
+  *margin-top: 7px;
 }
 .dropdown:hover .caret,
 .open.dropdown .caret {
@@ -40,7 +41,7 @@
   margin: 0; // override default ul
   list-style: none;
   background-color: @white;
-  border-color: #999;
+  border-color: #ccc;
   border-color: rgba(0,0,0,.2);
   border-style: solid;
   border-width: 1px;
@@ -50,6 +51,8 @@
      -moz-background-clip: padding;
           background-clip: padding-box;
   zoom: 1; // do we need this?
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
 
   // Dividers (basically an hr) within the dropdown
   .divider {
@@ -63,7 +66,7 @@
   // Links within the dropdown menu
   a {
     display: block;
-    padding: 2px 15px;
+    padding: 3px 15px;
     clear: both;
     font-weight: normal;
     line-height: 18px;
@@ -73,18 +76,12 @@
 }
 
 // Hover state
-.dropdown-menu li > a:hover {
-  color: #fff;
-  text-decoration: none;
-  background-color: @linkColor;
-}
-
-// Active state
+.dropdown-menu li > a:hover,
 .dropdown-menu .active > a,
 .dropdown-menu .active > a:hover {
   color: #fff;
-  background-color: #999;
-  background-image: none; // remove the gradient
+  text-decoration: none;
+  background-color: @linkColor;
 }
 
 // Open state for the dropdown

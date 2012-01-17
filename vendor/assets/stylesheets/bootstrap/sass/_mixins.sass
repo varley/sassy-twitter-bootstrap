@@ -125,8 +125,7 @@
   -o-transition: $transition
   transition: $transition
 
-// Transform for scale and rotate
-// translate, rotate, scale -- need to finalize
+// Transformations
 =rotate($degrees: 5deg)
   -webkit-transform: rotate($degrees)
   -moz-transform: rotate($degrees)
@@ -147,6 +146,14 @@
   -ms-transform: translate($x, $y)
   -o-transform: translate($x, $y)
   transform: translate($x, $y)
+
+// User select
+// For selecting text on the page
+=user-select($select)
+  -webkit-user-select: $select
+  -moz-user-select: $select
+  -o-user-select: $select
+  user-select: $select
 
 // Background clipping
 // Heads up: FF 3.6 and under need padding instead of padding-box

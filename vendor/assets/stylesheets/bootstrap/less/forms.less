@@ -441,9 +441,9 @@ input::-webkit-input-placeholder {
 // Common properties
 // -----------------
 
-.search-form,
-.inline-form,
-.horizontal-form {
+.form-search,
+.form-inline,
+.form-horizontal {
   input,
   textarea,
   select,
@@ -452,33 +452,33 @@ input::-webkit-input-placeholder {
     margin-bottom: 0;
   }
 }
+.form-search label,
+.form-inline label {
+  display: inline-block;
+}
 
 // Margin to space out fieldsets
 .control-group {
   margin-bottom: @baseLineHeight;
 }
-// Bold the labels so they stand out
-.control-group > label {
-  font-weight: bold;
-}
 
 // Horizontal-specific styles
 // --------------------------
 
-.horizontal-form {
+.form-horizontal {
   // Float the labels left
   .control-group > label {
     float: left;
-    width: 130px;
+    width: 140px;
     padding-top: 5px;
     text-align: right;
   }
   // Move over all input controls and content
   .controls {
-    margin-left: 150px;
+    margin-left: 160px;
   }
   // Move over buttons in .form-actions to align with .controls
   .form-actions {
-    padding-left: 150px;
+    padding-left: 160px;
   }
 }
