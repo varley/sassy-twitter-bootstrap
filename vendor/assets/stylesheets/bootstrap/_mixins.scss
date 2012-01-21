@@ -3,15 +3,18 @@
 // -----------------------------------------------------------------
 
 
-// Clearfix for clearing floats like a boss h5bp.com/q
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Clearfix
+// -------------------------
+// For clearing floats like a boss h5bp.com/q
 @mixin clearfix() {
   zoom: 1;
   &:before,
   &:after {
     display: table;
-    *display: inline;
     content: "";
-    zoom: 1;
   }
   &:after {
     clear: both;
@@ -19,6 +22,7 @@
 }
 
 // Center-align a block level element
+// -------------------------
 @mixin center-block() {
   display: block;
   margin-left: auto;
@@ -26,12 +30,14 @@
 }
 
 // IE7 inline-block
+// -------------------------
 @mixin ie7-inline-block() {
   *display: inline; /* IE7 inline-block hack */
   *zoom: 1;
 }
 
 // Sizing shortcuts
+// -------------------------
 @mixin size($height: 5px, $width: 5px) {
   width: $width;
   height: $height;
@@ -40,8 +46,9 @@
   @include size($size, $size);
 }
 
-// Input placeholder text
-@mixin placeholder($color: $grayLight) {
+// Placeholder text
+// -------------------------
+@mixin placeholder($color: $placeHolderText) {
   :-moz-placeholder {
     color: $color;
   }
@@ -50,7 +57,9 @@
   }
 }
 
-// Font Stacks
+// FONTS
+// --------------------------------------------------
+
 @mixin shorthand($weight: normal, $size: 14px, $lineHeight: 20px) {
   font-size: $size;
   font-weight: $weight;
@@ -78,13 +87,20 @@
   line-height: $lineHeight;
 }
 
-// Grid System
+// GRID SYSTEM
+// --------------------------------------------------
+
+// Site container
+// -------------------------
 @mixin fixed-container() {
   width: $siteWidth;
   margin-left: auto;
   margin-right: auto;
   @include clearfix();
 }
+
+// Columns and offseting
+// -------------------------
 @mixin columns($columns: 1) {
   width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
@@ -102,6 +118,11 @@
   @include gridColumn();
   @include columns($columnSpan);
 }
+
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
 
 // Border Radius
 @mixin border-radius($radius: 5px) {
@@ -166,14 +187,6 @@
           transform: translate($x, $y);
 }
 
-// User select
-// For selecting text on the page
-@mixin user-select($select) {
-  -webkit-user-select: $select;
-     -moz-user-select: $select;
-       -o-user-select: $select;
-          user-select: $select;
-}
 
 // Background clipping
 // Heads up: FF 3.6 and under need padding instead of padding-box
@@ -183,11 +196,28 @@
           background-clip: $clip;
 }
 
+// Background sizing
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+     -moz-background-size: $size;
+       -o-background-size: $size;
+          background-size: $size;
+}
+
 // Box sizing
 @mixin box-sizing($boxmodel) {
   -webkit-box-sizing: $boxmodel;
      -moz-box-sizing: $boxmodel;
           box-sizing: $boxmodel;
+}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+       -o-user-select: $select;
+          user-select: $select;
 }
 
 // Resize anything
@@ -205,6 +235,18 @@
      -moz-column-gap: $columnGap;
           column-gap: $columnGap;
 }
+
+// Opacity
+@mixin opacity($opacity: 100) {
+  filter: alpha(opacity=$opacity);
+    -moz-opacity: $opacity / 100;
+         opacity: $opacity / 100;
+}
+
+
+
+// BACKGROUNDS
+// --------------------------------------------------
   
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 @mixin translucent-background($color: $white, $alpha: 1) {
@@ -294,14 +336,12 @@
 }
 
 
-// Opacity
-@mixin opacity($opacity: 100) {
-  filter: alpha(opacity=$opacity);
-    -moz-opacity: $opacity / 100;
-         opacity: $opacity / 100;
-}
 
-// Popover arrows
+// COMPONENT MIXINS
+// --------------------------------------------------
+
+// POPOVER ARROWS
+// -------------------------
 // For tipsies and popovers
 @mixin popoverArrow-top($arrowWidth: 5px) {
     bottom: 0;
@@ -336,9 +376,3 @@
     border-right: $arrowWidth solid $black;
 }
 
-@mixin background-size($width, $height){
-  -webkit-background-size: $width $height;
-     -moz-background-size: $width $height;
-       -o-background-size: $width $height;
-          background-size: $width $height;
-}

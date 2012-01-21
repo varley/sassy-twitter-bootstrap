@@ -2,15 +2,14 @@
 // Variables to customize the look and feel of Bootstrap
 // -----------------------------------------------------
 
-// LINK COLORS
-// -----------
+// GLOBAL VALUES
+// --------------------------------------------------
 
+// Links
 $linkColor: #0088cc
 $linkColorHover: darken($linkColor, 15)
 
-// GRAYS
-// -----
-
+// Grays
 $black: black
 $grayDark: #333333
 $gray: #555555
@@ -18,9 +17,7 @@ $grayLight: #999999
 $grayLighter: #eeeeee
 $white: white
 
-// ACCENT COLORS
-// -------------
-
+// Accent colors
 $blue: #049cdb
 $blueDark: #0064cd
 $green: #46a546
@@ -30,9 +27,7 @@ $orange: #f89406
 $pink: #c3325f
 $purple: #7a43b6
 
-// GRID
-// ----
-
+// Grid system
 // Modify the grid styles in mixins.less
 $gridColumns: 12
 $gridColumnWidth: 60px
@@ -42,9 +37,22 @@ $siteWidth: $gridColumns * $gridColumnWidth + $gridGutterWidth * ($gridColumns -
 // Fluid width sidebar
 $fluidSidebarWidth: 220px
 
-// Z-INDEX
-// -------
+// Typography
+$baseFontSize: 13px
+$baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
+$baseLineHeight: 18px
 
+// Buttons
+$primaryButtonColor: $blue
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Input placeholder text color
+$placeHolderText: $grayLight
+
+// Z-index master list
+// Used for a bird's eye view of components dependent on the z-axis
 $zindexDropdown: 1000
 $zindexPopover: 1010
 $zindexTooltip: 1020
@@ -52,13 +60,7 @@ $zindexFixedNavbar: 1030
 $zindexModalBackdrop: 1040
 $zindexModal: 1050
 
-// THEME VARIABLES
-// ---------------
-
-// Typography
-$baseFontSize: 13px
-$baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
-$baseLineHeight: 18px
-
-// Visuals
-$primaryButtonColor: $blue
+// Navbar
+$navBarHeight: 40px
+$navbarBackground: #222222
+$navbarBackgroundHighlight: #333333
