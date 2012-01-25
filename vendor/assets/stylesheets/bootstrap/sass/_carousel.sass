@@ -15,6 +15,10 @@
     display: none
     position: relative
     +transition(0.6s ease-in-out left)
+  // Account for jankitude on images
+  .item > img
+    display: block
+    line-height: 1
   .active, 
   .next, 
   .prev
@@ -51,21 +55,22 @@
   font-size: 60px
   font-weight: 100
   line-height: 30px
-  color: #ccc
+  color: $white
   text-align: center
-  background: #999
-  background: rgba(0, 0, 0, 0.5)
-  +border-radius(20px)
+  background: $grayDarker
+  border: 3px solid $white
+  +border-radius(23px)
+  +opacity(50)
+  +transition(all 0.2s linear)
   // Reposition the right one
   &.right
     left: auto
     right: 15px
   // Hover state
   &:hover
-    color: #fff
+    color: $white
     text-decoration: none
-    background: #333
-    background: rgba(0, 0, 0, 0.75)
+    +opacity(90)
 
 // Caption for text below images
 // -----------------------------
@@ -76,9 +81,9 @@
   right: 0
   bottom: 0
   padding: 10px 15px 5px
-  background: #333
+  background: $grayDark
   background: rgba(0, 0, 0, 0.75)
 
 .carousel-caption h4,
 .carousel-caption p
-  color: #fff
+  color: $white

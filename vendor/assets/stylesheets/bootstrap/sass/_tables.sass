@@ -3,6 +3,14 @@
 // Tables for, you guessed it, tabular data
 // ----------------------------------------
 
+// BASE TABLES
+// -----------------
+
+table
+  max-width: 100%
+  border-collapse: collapse
+  border-spacing: 0
+
 // BASELINE STYLES
 // ---------------
 
@@ -117,7 +125,7 @@ table
 
 // TABLESORTER
 // -----------
-// Support for the tablesorter jQuerdy plugin
+// Support for the tablesorter jQuery plugin
 
 table
   // Tablesorting styles w/ jQuery plugin
@@ -129,7 +137,7 @@ table
       margin-top: 7px
       border-width: 0 4px 4px
       border-style: solid
-      border-color: #000 transparent
+      border-color: $black transparent
       visibility: hidden
   // Style the sorted column headers (THs)
   .headerSortUp,
@@ -152,7 +160,7 @@ table
       border-bottom: none
       border-left: 4px solid transparent
       border-right: 4px solid transparent
-      border-top: 4px solid #000
+      border-top: 4px solid $black
       visibility: visible
       +box-shadow(none)
       //can't add boxshadow to downward facing arrow :(

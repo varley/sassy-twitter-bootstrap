@@ -88,9 +88,8 @@
 // Reposition menu on open and round all corners
 .btn-group.open .dropdown-menu {
   display: block;
-  top: 30px;
+  margin-top: 1px;
   .border-radius(5px);
-  &.large { top: 40px; }
 }
 .btn-group.open .dropdown-toggle {
   background-image: none;
@@ -110,7 +109,7 @@
 .info,
 .success {
   .caret {
-    border-top-color: #fff;
+    border-top-color: @white;
     .opacity(75);
   }
 }
