@@ -1,6 +1,6 @@
 /* =============================================================
- * bootstrap-collapsible.js v2.0.0
- * http://twitter.github.com/bootstrap/javascript.html#collapsible
+ * bootstrap-collapse.js v2.0.0
+ * http://twitter.github.com/bootstrap/javascript.html#collapse
  * =============================================================
  * Copyright 2012 Twitter, Inc.
  *
@@ -125,9 +125,8 @@
   $(function () {
     $('body').on('click.collapse.data-api', '[data-toggle=collapse]', function ( e ) {
       var $this = $(this)
-        , target = $this.attr('data-target') || $this.attr('href')
+        , target = $this.attr('data-target') || e.preventDefault() || $this.attr('href')
         , option = $(target).data('collapse') ? 'toggle' : $this.data()
-      e.preventDefault()
       $(target).collapse(option)
     })
   })

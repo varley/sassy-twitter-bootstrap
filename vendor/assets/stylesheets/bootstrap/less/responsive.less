@@ -3,6 +3,14 @@
 // -------------------------------------------------------------
 
 
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+
 // RESPONSIVE CLASSES
 // ------------------
 
@@ -97,11 +105,12 @@
 
   // Modals
   .modal {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
     width: auto;
+    margin: 0;
     &.fade.in { top: auto; }
   }
   .modal-header .close {
@@ -156,11 +165,11 @@
   @siteWidth:         748px;
 
   // Bring grid mixins to recalculate widths
-  .columns(@columnSpan: 1) {
-    width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
+  .columns(@columns: 1) {
+    width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
   }
-  .offset(@columnOffset: 1) {
-    margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * (@columnOffset - 1)) + @gridGutterWidth;
+  .offset(@columns: 1) {
+    margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
   }
 
   // 16cols at 30px wide with 16px gutters
@@ -210,11 +219,11 @@
   @siteWidth:         1170px;
 
   // Bring grid mixins to recalculate widths
-  .columns(@columnSpan: 1) {
-    width: (@gridColumnWidth * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1));
+  .columns(@columns: 1) {
+    width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
   }
-  .offset(@columnOffset: 1) {
-    margin-left: (@gridColumnWidth * @columnOffset) + (@gridGutterWidth * (@columnOffset - 1)) + @gridGutterWidth;
+  .offset(@columns: 1) {
+    margin-left: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1)) + (@gridGutterWidth * 2);
   }
 
   .container {

@@ -10,7 +10,7 @@
 // -------------------------
 // For clearing floats like a boss h5bp.com/q
 @mixin clearfix() {
-  zoom: 1;
+  *zoom: 1;
   &:before,
   &:after {
     display: table;
@@ -48,7 +48,7 @@
 
 // Placeholder text
 // -------------------------
-@mixin placeholder($color: $placeHolderText) {
+@mixin placeholder($color: $placeholderText) {
   :-moz-placeholder {
     color: $color;
   }
@@ -56,6 +56,8 @@
     color: $color;
   }
 }
+
+
 
 // FONTS
 // --------------------------------------------------
@@ -107,7 +109,6 @@
 @mixin offset($columns: 1) {
   margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
 }
-
 // Necessary grid styles for every column to make them appear next to each other horizontally
 @mixin gridColumn() {
   float: left;
@@ -130,7 +131,7 @@
      -moz-border-radius: $radius;
           border-radius: $radius;
 }
-@mixin border-radius-custom($topLeft, $topRight, $bottomRight, $bottomLeft) {
+@mixin border-radius-custom($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
   -webkit-border-top-left-radius: $topLeft;
       -moz-border-radius-topleft: $topLeft;
           border-top-left-radius: $topLeft;
@@ -187,7 +188,6 @@
           transform: translate($x, $y);
 }
 
-
 // Background clipping
 // Heads up: FF 3.6 and under need padding instead of padding-box
 @mixin background-clip($clip) {
@@ -203,6 +203,7 @@
        -o-background-size: $size;
           background-size: $size;
 }
+
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
@@ -247,7 +248,7 @@
 
 // BACKGROUNDS
 // --------------------------------------------------
-  
+
 // Add an alphatransparency value to any background or border color (via Elyse Holladay)
 @mixin translucent-background($color: $white, $alpha: 1) {
     background-color: hsla(hue($color), saturation($color), lightness($color), $alpha);
@@ -375,4 +376,3 @@
     border-bottom: $arrowWidth solid transparent;
     border-right: $arrowWidth solid $black;
 }
-

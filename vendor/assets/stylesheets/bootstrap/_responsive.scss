@@ -3,6 +3,14 @@
 // -------------------------------------------------------------
 
 
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+@import "variables"; // Modify this for custom colors, font-sizes, etc
+@import "mixins";
+
+
 // RESPONSIVE CLASSES
 // ------------------
 
@@ -17,7 +25,7 @@
 // UP TO LANDSCAPE PHONE
 // ---------------------
 
-@media (max-width: 480px) {
+$media (max-width: 480px) {
 
   // Make the nav work for small devices
   .navbar {
@@ -97,11 +105,12 @@
 
   // Modals
   .modal {
-    position: fixed;
+    position: absolute;
     top: 20px;
     left: 20px;
     right: 20px;
     width: auto;
+    margin: 0;
     &.fade.in { top: auto; }
   }
   .modal-header .close {
@@ -114,7 +123,7 @@
 // LANDSCAPE PHONE TO SMALL DESKTOP & PORTRAIT TABLET
 // --------------------------------------------------
 
-@media (max-width: 768px) {
+$media (max-width: 768px) {
   
   // Unfix the navbar
   .navbar-fixed {
@@ -145,17 +154,17 @@
 
 
 // Bring grid mixins to recalculate widths
-@mixin columns940($columnSpan: 1) {
-  width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
+@mixin columns940($columns: 1) {
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
 }
-@mixin offset940($columnOffset: 1) {
-  margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * ($columnOffset - 1)) + $gridGutterWidth;
+@mixin offset940($columns: 1) {
+  margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
 }
 
 // PORTRAIT TABLET TO DEFAULT DESKTOP
 // ----------------------------------
 
-@media (min-width: 768px) and (max-width: 940px) {
+$media (min-width: 768px) and (max-width: 940px) {
 
   // Reset grid variables
   $gridColumns:       16;
@@ -164,11 +173,11 @@
   $siteWidth:         748px;
 
   // Bring grid mixins to recalculate widths
-  /*@mixin columns($columnSpan: 1) {
-    width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
+  /*@include columns($columns: 1); {
+    width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
   }
-  @mixin offset($columnOffset: 1) {
-    margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * ($columnOffset - 1)) + $gridGutterWidth;
+  @include offset($columns: 1); {
+    margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
   }*/
 
   // 16cols at 30px wide with 16px gutters
@@ -209,7 +218,7 @@
 // LARGE DESKTOP & UP
 // ------------------
 /*
-@media (min-width: 1210px) {
+$media (min-width: 1210px) {
 
   // Reset grid variables
   $gridColumns:       12;
@@ -218,11 +227,11 @@
   $siteWidth:         1170px;
 
   // Bring grid mixins to recalculate widths
-  @include columns($columnSpan: 1); {
-    width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1));
+  @include columns($columns: 1); {
+    width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
   }
-  @include offset($columnOffset: 1); {
-    margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * ($columnOffset - 1)) + $gridGutterWidth;
+  @include offset($columns: 1); {
+    margin-left: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1)) + ($gridGutterWidth * 2);
   }
 
   .container {

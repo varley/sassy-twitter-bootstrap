@@ -9,9 +9,9 @@ class Convert
   LESS_FILE_NAMES = [
     'reset',
     'variables',
-    #'mixins',
+    #'mixins', #
     'scaffolding',
-    #'type',
+    #'type', #
     'forms',
     'tables',
     'patterns',
@@ -31,8 +31,8 @@ class Convert
 
     # Components: Popovers
     'modals',
-    #'tooltip',
-    #'popovers',
+    #'tooltip', #
+    #'popovers', #
 
     # Components: Buttons & Alerts
     'buttons',
@@ -42,7 +42,7 @@ class Convert
     # Components: Misc
     'thumbnails',
     'labels',
-    #'progress-bars',
+    #'progress-bars', #
     'accordion',
     'carousel',
 
@@ -50,7 +50,7 @@ class Convert
     'utilities',
 
     # Responsive
-    #'responsive'
+    #'responsive' #
   ]
 
 
@@ -91,7 +91,7 @@ private
     "https://raw.github.com/twitter/bootstrap/#{BOOTSTRAP_BRANCH}/lib/#{file_name}.less"
   end
 
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+  #OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
   def open_git_file(file)
     open(file).read
   end
