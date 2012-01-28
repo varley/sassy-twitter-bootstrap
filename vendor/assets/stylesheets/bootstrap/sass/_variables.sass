@@ -44,7 +44,7 @@ $baseFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif
 $baseLineHeight: 18px
 
 // Buttons
-$primaryButtonColor: $blue
+$primaryButtonBackground: $linkColor
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
@@ -67,19 +67,23 @@ $navbarHeight: 40px
 $navbarBackground: $grayDarker
 $navbarBackgroundHighlight: $grayDark
 
+$navbarText: $grayLight
+$navbarLinkColor: $grayLight
+$navbarLinkColorHover: $white
+
 // Form states and alerts
 $warningText: #c09853
 $warningBackground: #fcf8e3
-$warningBorder: #f3edd2
+$warningBorder: darken(adjust-hue($warningBackground, -10), 3%)
 
 $errorText: #b94a48
 $errorBackground: #f2dede
-$errorBorder: #e9c7c7
+$errorBorder: darken(adjust-hue($errorBackground, -10), 3%)
 
 $successText: #468847
 $successBackground: #dff0d8
-$successBorder: #cfe8c4
+$successBorder: darken(adjust-hue($successBackground, -10), 5%)
 
 $infoText: #3a87ad
 $infoBackground: #d9edf7
-$infoBorder: #bfe1f2
+$infoBorder: darken(adjust-hue($infoBackground, -10), 7%)

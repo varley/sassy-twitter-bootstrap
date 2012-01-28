@@ -6,285 +6,386 @@
 // -----
 
 // As of v2.0.0, the <i> tag is reserved for icons from the Glyphicons set.
-// All icons receive the styles of the <i> tag and are then given a unique
-// class to add width, height, and background-position. Your resulting HTML
-// will look like <i class="inbox"></i>.
+// All icons receive the styles of the <i> tag with a base class of .icon
+// and are then given a unique class to add width, height, and
+// background-position. Your resulting HTML will look like this:
+// <i class="icon inbox"></i>. And for the white version of the icons, just
+// add the .white class like this: <i class="icon white inbox"></i>
 
 .icon
-  background-image: url(docs/assets/img/glyphicons-halflings-sprite.png)
-  background-position: 0 0
+  background-image: url(../img/glyphicons-halflings.png)
+  background-position: 14px 14px
   background-repeat: no-repeat
   display: inline-block
   vertical-align: text-top
   width: 14px
   height: 14px
+  +ie7-restore-right-whitespace
 
-.glass
+.icon.white
+  background-image: url(../img/glyphicons-halflings-white.png)
+
+.icon.glass
   background-position: 0      0
 
-.music
+.icon.music
   background-position: -24px 0
 
-.search
+.icon.search
   background-position: -48px 0
 
-.envelope
+.icon.envelope
   background-position: -72px 0
 
-.heart
+.icon.heart
   background-position: -96px 0
 
-.star
+.icon.star
   background-position: -120px 0
 
-.star-empty
+.icon.star-empty
   background-position: -144px 0
 
-.user
+.icon.user
   background-position: -168px 0
 
-.film
+.icon.film
   background-position: -192px 0
 
-.th-large
+.icon.th-large
   background-position: -216px 0
 
-.th
+.icon.th
   background-position: -240px 0
 
-.th-list
+.icon.th-list
   background-position: -264px 0
 
-.ok
+.icon.ok
   background-position: -288px 0
 
-.remove
+.icon.remove
   background-position: -312px 0
 
-.zoom-in
+.icon.zoom-in
   background-position: -336px 0
 
-.zoom-out
+.icon.zoom-out
   background-position: -360px 0
 
-.off
+.icon.off
   background-position: -384px 0
 
-.signal
+.icon.signal
   background-position: -408px 0
 
-.cog
+.icon.cog
   background-position: -432px 0
 
-.trash
+.icon.trash
   background-position: -456px 0
 
-.home
+.icon.home
   background-position: 0 -24px
 
-.file
+.icon.file
   background-position: -24px -24px
 
-.time
+.icon.time
   background-position: -48px -24px
 
-.road
+.icon.road
   background-position: -72px -24px
 
-.download-alt
+.icon.download-alt
   background-position: -96px -24px
 
-.download
+.icon.download
   background-position: -120px -24px
 
-.upload
+.icon.upload
   background-position: -144px -24px
 
-.inbox
+.icon.inbox
   background-position: -168px -24px
 
-.play-circle
+.icon.play-circle
   background-position: -192px -24px
 
-.repeat
+.icon.repeat
   background-position: -216px -24px
 
-.refresh
+.icon.refresh
   background-position: -240px -24px
 
-.calendar
+.icon.list-alt
   background-position: -264px -24px
 
-.lock
-  background-position: -288px -24px
+.icon.lock
+  background-position: -287px -24px
 
-.flag
+// 1px off
+.icon.flag
   background-position: -312px -24px
 
-.headphones
+.icon.headphones
   background-position: -336px -24px
 
-.volume-off
+.icon.volume-off
   background-position: -360px -24px
 
-.volume-down
+.icon.volume-down
   background-position: -384px -24px
 
-.volume-up
+.icon.volume-up
   background-position: -408px -24px
 
-.qrcode
+.icon.qrcode
   background-position: -432px -24px
 
-.barcode
+.icon.barcode
   background-position: -456px -24px
 
-.tag
+.icon.tag
   background-position: 0 -48px
 
-.tags
-  background-position: -24px -48px
+.icon.tags
+  background-position: -25px -48px
 
-.book
+// 1px off
+.icon.book
   background-position: -48px -48px
 
-.bookmark
+.icon.bookmark
   background-position: -72px -48px
 
-.print
+.icon.print
   background-position: -96px -48px
 
-.camera
+.icon.camera
   background-position: -120px -48px
 
-.font
+.icon.font
   background-position: -144px -48px
 
-.bold
-  background-position: -168px -48px
+.icon.bold
+  background-position: -167px -48px
 
-.italic
+// 1px off
+.icon.italic
   background-position: -192px -48px
 
-.text-height
+.icon.text-height
   background-position: -216px -48px
 
-.text-width
+.icon.text-width
   background-position: -240px -48px
 
-.align-left
+.icon.align-left
   background-position: -264px -48px
 
-.align-center
+.icon.align-center
   background-position: -288px -48px
 
-.align-right
+.icon.align-right
   background-position: -312px -48px
 
-.align-justify
+.icon.align-justify
   background-position: -336px -48px
 
-.list
+.icon.list
   background-position: -360px -48px
 
-.indent-left
+.icon.indent-left
   background-position: -384px -48px
 
-.indent-right
+.icon.indent-right
   background-position: -408px -48px
 
-.facetime-video
+.icon.facetime-video
   background-position: -432px -48px
 
-.picture
+.icon.picture
   background-position: -456px -48px
 
-.pencil
+.icon.pencil
   background-position: 0 -72px
 
-.map-marker
+.icon.map-marker
   background-position: -24px -72px
 
-.adjust
+.icon.adjust
   background-position: -48px -72px
 
-.tint
+.icon.tint
   background-position: -72px -72px
 
-.edit
+.icon.edit
   background-position: -96px -72px
 
-.share
+.icon.share
   background-position: -120px -72px
 
-.check
+.icon.check
   background-position: -144px -72px
 
-.move
+.icon.move
   background-position: -168px -72px
 
-.step-backward
+.icon.step-backward
   background-position: -192px -72px
 
-.fast-backward
+.icon.fast-backward
   background-position: -216px -72px
 
-.backward
+.icon.backward
   background-position: -240px -72px
 
-.play
+.icon.play
   background-position: -264px -72px
 
-.pause
+.icon.pause
   background-position: -288px -72px
 
-.stop
+.icon.stop
   background-position: -312px -72px
 
-.forward
+.icon.forward
   background-position: -336px -72px
 
-.fast-forward
+.icon.fast-forward
   background-position: -360px -72px
 
-.step-forward
+.icon.step-forward
   background-position: -384px -72px
 
-.eject
+.icon.eject
   background-position: -408px -72px
 
-.chevron-left
+.icon.chevron-left
   background-position: -432px -72px
 
-.chevron-right
+.icon.chevron-right
   background-position: -456px -72px
 
-.arrow-left
+.icon.plus-sign
+  background-position: 0 -96px
+
+.icon.minus-sign
+  background-position: -24px -96px
+
+.icon.remove-sign
+  background-position: -48px -96px
+
+.icon.ok-sign
+  background-position: -72px -96px
+
+.icon.question-sign
+  background-position: -96px -96px
+
+.icon.info-sign
+  background-position: -120px -96px
+
+.icon.screenshot
+  background-position: -144px -96px
+
+.icon.remove-circle
+  background-position: -168px -96px
+
+.icon.ok-circle
+  background-position: -192px -96px
+
+.icon.ban-circle
+  background-position: -216px -96px
+
+.icon.arrow-left
   background-position: -240px -96px
 
-.arrow-right
+.icon.arrow-right
   background-position: -264px -96px
 
-.arrow-up
-  background-position: -288px -96px
+.icon.arrow-up
+  background-position: -289px -96px
 
-.arrow-down
+// 1px off
+.icon.arrow-down
   background-position: -312px -96px
 
-.share-alt
+.icon.share-alt
   background-position: -336px -96px
 
-.resize-full
+.icon.resize-full
   background-position: -360px -96px
 
-.resize-small
+.icon.resize-small
   background-position: -384px -96px
 
-.plus
+.icon.plus
   background-position: -408px -96px
 
-.minus
-  background-position: -432px -96px
+.icon.minus
+  background-position: -433px -96px
 
-.asterisk
+.icon.asterisk
   background-position: -456px -96px
+
+.icon.exclamation-sign
+  background-position: 0 -120px
+
+.icon.gift
+  background-position: -24px -120px
+
+.icon.leaf
+  background-position: -48px -120px
+
+.icon.fire
+  background-position: -72px -120px
+
+.icon.eye-open
+  background-position: -96px -120px
+
+.icon.eye-close
+  background-position: -120px -120px
+
+.icon.warning-sign
+  background-position: -144px -120px
+
+.icon.plane
+  background-position: -168px -120px
+
+.icon.calendar
+  background-position: -192px -120px
+
+.icon.random
+  background-position: -216px -120px
+
+.icon.comment
+  background-position: -240px -120px
+
+.icon.magnet
+  background-position: -264px -120px
+
+.icon.chevron-up
+  background-position: -288px -120px
+
+.icon.chevron-down
+  background-position: -313px -119px
+
+// 1px off
+.icon.retweet
+  background-position: -336px -120px
+
+.icon.shopping-cart
+  background-position: -360px -120px
+
+.icon.folder-close
+  background-position: -384px -120px
+
+.icon.folder-open
+  background-position: -408px -120px
+
+.icon.resize-vertical
+  background-position: -432px -119px
+
+.icon.resize-horizontal
+  background-position: -456px -118px

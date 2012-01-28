@@ -14,7 +14,7 @@
   $shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1)
   +box-shadow($shadow)
 
-// Text and links
+// Brand, links, text, and buttons
 .navbar
   // Hover and active states
   .brand:hover
@@ -32,9 +32,10 @@
     line-height: 1
     color: $white
   // Plain text in topbar
-  p
-    margin: 0
+  .navbar-text
+    margin-bottom: 0
     line-height: 40px
+    color: $navbarText
     a:hover
       color: $white
       background-color: transparent
@@ -53,6 +54,7 @@
   input,
   select
     display: inline-block
+    margin-top: 5px
     margin-bottom: 0
 
 // Navbar search
@@ -66,7 +68,7 @@
     +sans-serif(13px, normal, 1)
     color: $white
     color: rgba(255, 255, 255, 0.75)
-    background: #444
+    background: #666
     background: rgba(255, 255, 255, 0.3)
     border: 1px solid #111
     $shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.15)
@@ -90,6 +92,9 @@
       +box-shadow(0 0 3px rgba(0, 0, 0, 0.15))
       outline: 0
 
+// STATIC OR FIXED?
+// ----------------
+
 // Static navbar
 .navbar-static
   margin-bottom: $baseLineHeight
@@ -100,7 +105,7 @@
   +border-radius(4px)
 
 // Fixed navbar
-.navbar-fixed
+.navbar-fixed-top
   position: fixed
   top: 0
   right: 0
@@ -130,31 +135,33 @@
   float: none
   padding: 10px 10px 11px
   line-height: 19px
-  color: $grayLight
+  color: $navbarLinkColor
   text-decoration: none
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
 
 // Hover
 .navbar .nav > li > a:hover
   background-color: transparent
-  color: $white
+  color: $navbarLinkColorHover
   text-decoration: none
 
 // Active nav items
-.navbar .nav .active > a
-  color: $white
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover
+  color: $navbarLinkColorHover
   text-decoration: none
-  background-color: $grayDarker
+  background-color: $navbarBackground
   background-color: rgba(0, 0, 0, 0.5)
 
 // Dividers (basically a vertical hr)
 .navbar .vertical-divider
-  height: 40px
+  height: $navbarHeight
   width: 1px
   margin: 0 5px
   overflow: hidden
-  background-color: $grayDarker
-  border-right: 1px solid #444
+  background-color: $navbarBackground
+  border-right: 1px solid $navbarBackgroundHighlight
 
 // Secondary (floated right) nav in topbar
 .navbar .nav.pull-right

@@ -11,10 +11,13 @@ class Convert
     'variables',
     #'mixins', #
     'scaffolding',
-    #'type', #
+    'grid',
+    'layouts',
+
+    'type', #
+    #'code', #
     'forms',
     'tables',
-    'patterns',
 
     # Components: Common
     'sprites',
@@ -24,10 +27,11 @@ class Convert
     'close',
 
     # Components: Nav
-    'navbar',
     'navs',
+    'navbar',
     'breadcrumbs',
     'pagination',
+    'pager',
 
     # Components: Popovers
     'modals',
@@ -45,6 +49,7 @@ class Convert
     #'progress-bars', #
     'accordion',
     'carousel',
+    'hero-unit',
 
     # Utility classes
     'utilities',
@@ -88,7 +93,7 @@ class Convert
 private
   
   def less_file_url(file_name)
-    "https://raw.github.com/twitter/bootstrap/#{BOOTSTRAP_BRANCH}/lib/#{file_name}.less"
+    "https://raw.github.com/twitter/bootstrap/#{BOOTSTRAP_BRANCH}/less/#{file_name}.less"
   end
 
   #OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE

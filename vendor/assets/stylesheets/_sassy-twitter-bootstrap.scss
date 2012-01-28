@@ -18,9 +18,12 @@
 
 // Grid system and page structure
 @import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
 
 // Base CSS
 @import "bootstrap/type";
+@import "bootstrap/code";
 @import "bootstrap/forms";
 @import "bootstrap/tables";
 
@@ -32,10 +35,11 @@
 @import "bootstrap/close";
 
 // Components: Nav
-@import "bootstrap/navbar";
 @import "bootstrap/navs";
+@import "bootstrap/navbar";
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
+@import "bootstrap/pager";
 
 // Components: Popovers
 @import "bootstrap/modals";
@@ -51,6 +55,9 @@
 @import "bootstrap/thumbnails";
 @import "bootstrap/labels";
 @import "bootstrap/progress-bars";
+@import "bootstrap/accordian";
+@import "bootstrap/carousel";
+@import "bootstrap/hero-unit";
 
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
