@@ -6,7 +6,7 @@
 // --------------------------------------------------
 
 // Clearfix
-// -------------------------
+// --------
 // For clearing floats like a boss h5bp.com/q
 =clearfix
   *zoom: 1
@@ -17,15 +17,28 @@
   &:after
     clear: both
 
+// Webkit-style focus
+// ------------------
+=tab-focus
+  // Default
+  outline: thin dotted
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color
+  outline-offset: -2px
+  // Firefox
+  -moz-outline: 5px auto -moz-mac-focusring
+  -moz-outline-radius: 6px
+  -moz-outline-offset: 0
+
 // Center-align a block level element
-// -------------------------
+// ----------------------------------
 =center-block
   display: block
   margin-left: auto
   margin-right: auto
 
 // IE7 inline-block
-// -------------------------
+// ----------------
 =ie7-inline-block
   *display: inline
   /* IE7 inline-block hack
@@ -313,10 +326,7 @@
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
   +gradientBar($startColor, $endColor)
   // in these cases the gradient won't cover the background, so we override
-  &:hover, &:active, &.active, &.disabled
-    background-color: $endColor
-  // called out separately because IE8 would ignore otherwise
-  &[disabled]
+  &:hover, &:active, &.active, &.disabled, &[disabled]
     background-color: $endColor
   // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,

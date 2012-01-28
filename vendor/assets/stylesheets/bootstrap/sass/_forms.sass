@@ -71,9 +71,9 @@ label select
 
 // Mini reset for unique input types
 
-input[type=image],
-input[type=checkbox],
-input[type=radio]
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"]
   width: auto
   height: auto
   padding: 0
@@ -86,7 +86,7 @@ input[type=radio]
   +border-radius(0)
 
 // Reset the file input to browser defaults
-input[type=file]
+input[type="file"]
   padding: initial
   line-height: initial
   border: initial
@@ -96,16 +96,16 @@ input[type=file]
 
 // Help out input buttons
 
-input[type=button],
-input[type=reset],
-input[type=submit]
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
   width: auto
   height: auto
 
 // Set the height of select and file controls to match text inputs
 
 select,
-input[type=file]
+input[type="file"]
   height: 28px
   /* In IE7, the height of the select element cannot be changed by height, only font-size
   *margin-top: 4px
@@ -125,7 +125,7 @@ select[size]
   height: auto
 
 // Remove shadow from image inputs
-input[type=image]
+input[type="image"]
   +box-shadow(none)
 
 // Make textarea height behave
@@ -133,7 +133,7 @@ textarea
   height: auto
 
 // Hidden inputs
-input[type=hidden]
+input[type="hidden"]
   display: none
 
 // CHECKBOXES & RADIOS
@@ -145,8 +145,8 @@ input[type=hidden]
 .checkbox
   padding-left: 18px
 
-.radio input[type=radio],
-.checkbox input[type=checkbox]
+.radio input[type="radio"],
+.checkbox input[type="checkbox"]
   float: left
   margin-left: -18px
 
@@ -186,8 +186,8 @@ textarea:focus
   outline: thin dotted \9
   /* IE6-8
 
-input[type=file]:focus,
-input[type=checkbox]:focus,
+input[type="file"]:focus,
+input[type="checkbox"]:focus,
 select:focus
   +box-shadow(none)
   // override for file inputs
@@ -491,6 +491,7 @@ select:focus:required:invalid
   // Increase spacing between groups
   .control-group
     margin-bottom: $baseLineHeight
+    +clearfix
   // Float the labels left
   .control-group > label
     float: left

@@ -14,6 +14,8 @@
 
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar
+  margin-top: $baseLineHeight / 2
+  margin-bottom: $baseLineHeight / 2
   .btn-group
     display: inline-block
     +ie7-inline-block
@@ -67,7 +69,8 @@
 
 .btn-group .btn:hover,
 .btn-group .btn:focus,
-.btn-group .btn:active
+.btn-group .btn:active,
+.btn-group .btn.active
   z-index: 2
 
 // Split button dropdowns
@@ -98,8 +101,12 @@
 
 // Reposition the caret
 .btn .caret
-  margin-top: 6px
+  margin-top: 7px
   margin-left: 0
+
+.btn:hover .caret,
+.open.btn-group .caret
+  +opacity(100)
 
 // Account for other colors
 

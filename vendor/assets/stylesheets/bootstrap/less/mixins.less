@@ -7,7 +7,7 @@
 // --------------------------------------------------
 
 // Clearfix
-// -------------------------
+// --------
 // For clearing floats like a boss h5bp.com/q
 .clearfix() {
   *zoom: 1;
@@ -21,8 +21,22 @@
   }
 }
 
+// Webkit-style focus
+// ------------------
+.tab-focus() {
+  // Default
+  outline: thin dotted;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  // Firefox
+  -moz-outline: 5px auto -moz-mac-focusring;
+  -moz-outline-radius: 6px;
+  -moz-outline-offset: 0;
+}
+
 // Center-align a block level element
-// -------------------------
+// ----------------------------------
 .center-block() {
   display: block;
   margin-left: auto;
@@ -30,7 +44,7 @@
 }
 
 // IE7 inline-block
-// -------------------------
+// ----------------
 .ie7-inline-block() {
   *display: inline; /* IE7 inline-block hack */
   *zoom: 1;
@@ -346,12 +360,7 @@
   .gradientBar(@startColor, @endColor);
 
   // in these cases the gradient won't cover the background, so we override
-  &:hover, &:active, &.active, &.disabled {
-    background-color: @endColor;
-  }
-
-  // called out separately because IE8 would ignore otherwise
-  &[disabled] {
+  &:hover, &:active, &.active, &.disabled, &[disabled] {
     background-color: @endColor;
   }
 

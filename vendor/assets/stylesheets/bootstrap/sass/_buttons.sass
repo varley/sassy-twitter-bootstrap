@@ -16,6 +16,11 @@
   &.info:hover
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
     color: $white
+  &.primary.active,
+  &.danger.active,
+  &.success.active,
+  &.info.active
+    color: rgba(255, 255, 255, 0.75)
   &.primary
     +buttonBackground($primaryButtonBackground, adjust-hue($primaryButtonBackground, 15))
   // Danger and error appear as red
@@ -68,6 +73,7 @@
     +box-shadow($shadow)
     background-color: darken($white, 10%)
     background-color: darken($white, 15%) e("\9")
+    color: rgba(0, 0, 0, 0.5)
   &.disabled,
   &[disabled]
     cursor: default
@@ -88,12 +94,12 @@
     font-size: $baseFontSize - 2px
     line-height: $baseLineHeight - 2px
   &.small .icon
-    margin-top: -2px
+    margin-top: -1px
 
 // Help Firefox not be a jerk about adding extra padding to buttons
 
 button.btn,
-input[type=submit].btn
+input[type="submit"].btn
   &::-moz-focus-inner
     padding: 0
     border: 0

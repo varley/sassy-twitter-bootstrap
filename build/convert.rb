@@ -14,7 +14,7 @@ class Convert
     'grid',
     'layouts',
 
-    'type', #
+    #'type', #
     #'code', #
     'forms',
     'tables',
